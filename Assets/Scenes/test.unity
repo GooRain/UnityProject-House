@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1879732917}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 61979493}
   - component: {fileID: 61979492}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lamp: {fileID: 144729265}
+  floor: {fileID: 135956242}
+  rate: 5
 --- !u!23 &61979493
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -265,6 +267,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &135956242 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1221056863224126, guid: c8f1bcab65fa59e4795b54f3d2192320,
+    type: 2}
+  m_PrefabInternal: {fileID: 1589934911}
 --- !u!1 &144729263
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +312,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 25
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1110,6 +1117,63 @@ Prefab:
     - target: {fileID: 4386306654559516, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23816919372099130, guid: c8f1bcab65fa59e4795b54f3d2192320,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1221056863224126, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_Name
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445628365161590, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_Name
+      value: Ceil
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255885681515482, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327321876528644, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435632121671934, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647612285920616, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439980252136288, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384190001488088, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795318369641056, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210201677217796, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295412046077234, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188484718318896, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361777109827456, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8f1bcab65fa59e4795b54f3d2192320, type: 2}
