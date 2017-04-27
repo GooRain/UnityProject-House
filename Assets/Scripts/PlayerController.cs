@@ -12,17 +12,17 @@ public class PlayerController : MonoBehaviour
     Transform camT;
     float rotY;
     Rigidbody rb;
+	bool isCursorLocked = false;
 
     void Start()
     {
-        Cursor.visible = false;
+		LockCursor();
         camT = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-
         //	Movement
         float movementX = Input.GetAxisRaw("Horizontal");
         float movementZ = Input.GetAxisRaw("Vertical");
@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
+				LockCursor();
                 Debug.Log("Interact");
                 if (rcHit.collider.gameObject.GetComponentInParent<AnimController>())
                 {
@@ -67,7 +68,29 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.GetSceneByName("menu");
-        }
+			//SceneManager.GetSceneAt(0);
+			UnlockCursor();
+			SceneManager.GetSceneByName("menu");
+		}
     }
+
+	void LockCursor()
+	{
+		if (!isCursorLocked)
+		{
+			Cursor.visible = false;
+			Cursor.lockState = CursorLockMode.Locked;
+			isCursorLocked = true;
+		}
+	}
+
+	void UnlockCursor()
+	{
+		if (isCursorLocked)
+		{
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+			isCursorLocked = false;
+		}
+	}
 }
